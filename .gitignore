@@ -3,24 +3,21 @@
 export.cfg
 export_presets.cfg
 
-# Builds
-*.pck
-*.exe
-*.zip
-*.apk
-*.aab
-*.wasm
-*.html
-*.js
-
 # OS files
 .DS_Store
 Thumbs.db
 
+# Temporary and cache files
+*.tmp
+*.log
+
+# Builds
+*.exe
+*.pck
+*.zip
+*.apk
+*.aab
+
 # Editor / IDE configs
 .vscode/
 .idea/
-
-# Logs & Temp files
-*.log
-*.tmp
