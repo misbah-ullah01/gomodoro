@@ -1,2 +1,3 @@
 res://scenes/main/MainUI.tscn
 res://scripts/TimerManager.gd
+res://scenes/minigame/mini_game.tscn
