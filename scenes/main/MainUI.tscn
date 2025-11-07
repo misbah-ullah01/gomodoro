@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckgkwnxdcvtw7"]
+
+[ext_resource type="Script" uid="uid://b3k3vtjk2yb61" path="res://scripts/TimerManager.gd" id="1_c6qpx"]
+
+[node name="MainUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c6qpx")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TimerDisplay" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CycleTracker" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/CycleTracker"]
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer/VBoxContainer/CycleTracker"]
+layout_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="MarginContainer/VBoxContainer/CycleTracker"]
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="MarginContainer/VBoxContainer/CycleTracker"]
+layout_mode = 2
+
+[node name="ControlButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StartPause" type="Button" parent="MarginContainer/VBoxContainer/ControlButtons"]
+layout_mode = 2
+
+[node name="Reset" type="Button" parent="MarginContainer/VBoxContainer/ControlButtons"]
+layout_mode = 2
+
+[node name="MiniGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ControlButtons/StartPause" to="." method="_on_start_pause_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ControlButtons/Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MiniGameButton" to="." method="_on_mini_game_button_pressed"]
