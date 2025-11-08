@@ -18,7 +18,7 @@ var time_left = focus_time
 var focus_count = 0
 
 func _ready():
-	timer_display.add_theme_color_override("font_color", Color.WHITE)
+	timer_display.add_theme_color_override("font_color", Color(0.875, 0.302, 0.428, 1.0))
 	update_display()
 	progress.max_value = time_left
 	progress.value = 0
@@ -97,6 +97,7 @@ func _on_start_pause_pressed() -> void:
 	start_pause()
 	
 func _on_reset_pressed() -> void:
+	focus_count = 0
 	_set_phase("focus")
 	
 func _on_mini_game_button_pressed() -> void:
