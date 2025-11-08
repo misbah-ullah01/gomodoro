@@ -25,9 +25,11 @@ layout_mode = 2
 
 [node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+text = "title"
 
 [node name="TimerDisplay" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+text = "display time"
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -52,12 +54,17 @@ layout_mode = 2
 
 [node name="StartPause" type="Button" parent="MarginContainer/VBoxContainer/ControlButtons"]
 layout_mode = 2
+text = "start/pause"
 
 [node name="Reset" type="Button" parent="MarginContainer/VBoxContainer/ControlButtons"]
 layout_mode = 2
+text = "reset"
 
 [node name="MiniGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+text = "Play Mini Game"
+
+[node name="CountdownTimer" type="Timer" parent="."]
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ControlButtons/StartPause" to="." method="_on_start_pause_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ControlButtons/Reset" to="." method="_on_reset_pressed"]
