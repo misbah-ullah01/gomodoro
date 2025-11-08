@@ -30,11 +30,17 @@ layout_mode = 2
 
 [node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "title"
+theme_override_font_sizes/font_size = 48
+text = "GOMODORO	"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TimerDisplay" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 98
 text = "display time"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

@@ -18,6 +18,7 @@ var time_left = focus_time
 var focus_count = 0
 
 func _ready():
+	timer_display.add_theme_color_override("font_color", Color.WHITE)
 	update_display()
 	progress.max_value = time_left
 	progress.value = 0
@@ -71,12 +72,15 @@ func _phase_complete():
 func _set_phase(new_phase):
 	phase = new_phase
 	if phase == "focus":
+		timer_display.add_theme_color_override("font_color", Color(0.875, 0.302, 0.428, 1.0))
 		time_left = focus_time
 		minigame_btn.hide()
 	elif phase == "short_break":
+		timer_display.add_theme_color_override("font_color", Color.AQUA)
 		time_left = short_break_time
 		minigame_btn.show()
 	elif phase == "long_break":
+		timer_display.add_theme_color_override("font_color", Color.GOLDENROD)
 		time_left = long_break_time
 		minigame_btn.show()
 	
