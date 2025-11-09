@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckgkwnxdcvtw7"]
+[gd_scene load_steps=6 format=3 uid="uid://ckgkwnxdcvtw7"]
 
 [ext_resource type="Script" uid="uid://b3k3vtjk2yb61" path="res://scripts/TimerManager.gd" id="1_c6qpx"]
+
+[sub_resource type="Gradient" id="Gradient_c6qpx"]
+colors = PackedColorArray(0.4126076, 0.41549355, 0.42339376, 1, 0.4117647, 0.41568628, 0.42352942, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1kb7i"]
+gradient = SubResource("Gradient_c6qpx")
+fill_from = Vector2(0, 0.008547009)
+
+[sub_resource type="Gradient" id="Gradient_1daji"]
+offsets = PackedFloat32Array(0.007782101, 0.49805447, 1)
+colors = PackedColorArray(1.732707e-06, 0.5914603, 0.699782, 1, 0, 0.84127736, 0.8838097, 1, 0.99999994, 0.20707268, 0.73355913, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1daji"]
+gradient = SubResource("Gradient_1daji")
+fill_to = Vector2(1, 0.047008548)
 
 [node name="MainUI" type="Control"]
 layout_mode = 3
@@ -37,7 +52,6 @@ vertical_alignment = 1
 
 [node name="TimerDisplay" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 98
 text = "display time"
 horizontal_alignment = 1
@@ -45,6 +59,12 @@ vertical_alignment = 1
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_top = 40
+texture_under = SubResource("GradientTexture2D_1kb7i")
+texture_progress = SubResource("GradientTexture2D_1daji")
+tint_progress = Color(0.36468717, 0.5530627, 0.7205617, 1)
 
 [node name="CycleTracker" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
