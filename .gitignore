@@ -1,23 +1,27 @@
-# Godot-specific
+# Godot 4-specific
 .import/
+.godot/
 export.cfg
 export_presets.cfg
 
-# OS files
+# OS generated files
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Temporary and cache files
+# User/editor cache
 *.tmp
 *.log
+*.cfg
+*.bak
+*.swp
 
-# Builds
-*.exe
-*.pck
-*.zip
-*.apk
-*.aab
+# Binary caches
+shader_cache/
+uid_cache.bin
+global_script_class_cache.cfg
+scene_groups_cache.cfg
 
-# Editor / IDE configs
-.vscode/
-.idea/
+# Backup files
+*.old
+*.orig
